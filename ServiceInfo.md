@@ -1,0 +1,1 @@
+we are. using the base tempalte  service.  so we will creat that first as. i. go down the line we will create the microservice  on by one  by the same template so well create one base. folder with every thing in side. it and. use. again and again that folder 
