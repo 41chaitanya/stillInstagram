@@ -4,7 +4,7 @@ import postModel from "../models/post.model.js"
 
 export const createPostSrvice=async ({userId,caption,file}) => {
     const uploaded=await imagekit.upload({
-        file:file.buffer.toString("base64"),
+        file:file.buffer,
         fileName:Date.now()+"--"+file.originalname,
         folder:"/stillInstaPost"
     })
