@@ -5,7 +5,7 @@ import { ENV } from "./src/config/env.js";
 const startServer=async () => {
 	await connectDB()
 	app.listen(ENV.PORT,()=>{
-		console.log(`Server is  Running on http://localhost:${ENV.PORT}`)
+		console.log(`Server is  auth server Running on http://localhost:${ENV.PORT}`)
 	})
 	
 }
