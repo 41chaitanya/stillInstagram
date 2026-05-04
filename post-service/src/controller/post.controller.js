@@ -4,7 +4,7 @@ import { createPostSrvice } from "../service/post.service.js";
 export const createPost = asynHandler(async (req, res) => {
   const { caption } = req.body;
 
-  const userId = req.headers["x-user-id"] || "123"; //custom header ha abhi ke liye dummy ha baad me hum asli user pr aajye ge
+  const userId = req.headers["x-user-id"] || Date.now().toString; //custom header ha abhi ke liye dummy ha baad me hum asli user pr aajye ge
   if (!req.file) {
     throw new Error("Image is required");
   }
