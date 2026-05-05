@@ -1,13 +1,11 @@
 import express from "express";
-import dotenv from "dotenv";
 import { postProxy } from "./routes/apiG.post.routes.js";
 import { followProxy } from "./routes/apiG.follow.routes.js";
 import { messageProxy } from "./routes/apiG.message.routes.js";
 import { authProxy } from "./routes/apiG.auth.routes.js";
+import { verifyToken } from "./middlewares/apiG.auth.middleware.js";
 
 
-
-dotenv.config();
 
 const app = express();
 
