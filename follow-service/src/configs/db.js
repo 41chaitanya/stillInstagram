@@ -5,7 +5,7 @@ export const connectDB =()=>{
 
     try {
         mongoose.connect(ENV.MONGO_URI)
-        console.log("auht db connected successfully ")
+        console.log("follow  db connected successfully ")
         
     } catch (error) {
         console.log("DB connection error",error.message)

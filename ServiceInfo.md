@@ -7,3 +7,7 @@ The chosen ImageKit ID will be used in asset URLs:
 
 https://ik.imagekit.io/q2uar5pke/path/to/myimage.jpg
 
+8001  apigateway
+8002 auth
+8003 follow
+8004 message
