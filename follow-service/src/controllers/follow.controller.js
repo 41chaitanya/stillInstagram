@@ -30,13 +30,13 @@ export const unfollowUser = asyncHandler(async (req, res) => {
 
 
 export const getfollower = asyncHandler(async (req, res) => {
-  const {userId} = req.params();
+  const {userId} = req.params;
 
   const allFollowers = await getFollowerService(userId);
   res.json({ success: true, allFollowers });
 });
 export const getFollowing = asyncHandler(async (req, res) => {
-    const {userId} = req.params();
+    const {userId} = req.params;
 
     const allFollowing=await getFollowingService(userId)
     res.json({ success: true, allFollowing });

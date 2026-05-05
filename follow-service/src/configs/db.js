@@ -1,10 +1,10 @@
 import mongoose from "mongoose"
 import {ENV} from "./env.js"
 
-export const connectDB =()=>{
+export const connectDB = async ()=>{
 
     try {
-        mongoose.connect(ENV.MONGO_URI)
+        await mongoose.connect(ENV.MONGO_URI)
         console.log("follow  db connected successfully ")
         
     } catch (error) {

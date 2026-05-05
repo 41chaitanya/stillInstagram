@@ -1,8 +1,8 @@
 import { asyncHandler } from "../middlewares/asyncHandler.middleware.js";
-import { registrService } from "../service/auth.service.js";
+import { registerService } from "../service/auth.service.js";
 
 export const register = asyncHandler(async (req, res) => {
-  const newUser = await registrService(req.body);
+  const newUser = await registerService(req.body);
   res.status(201).json({ success: true, newUser });
 });
 
@@ -10,7 +10,7 @@ export const register = asyncHandler(async (req, res) => {
 
 export const login = asyncHandler(async (req, res) => {
  
-    const data = await loginUser(req.body);
+    const data = await loginService(req.body);
     res.json({ success: true, ...data });
   
 })

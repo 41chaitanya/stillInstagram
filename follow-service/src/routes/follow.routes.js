@@ -4,9 +4,9 @@ const router = express.Router();
 
 
 router.post("/:followingId",followUser)
-router.post("/:followingId",unfollowUser)
+router.delete("/:followingId",unfollowUser)
 
 
 router.get("/followers/:userId",getfollower)
-router.get("/followers/:userId",getFollowing)
+router.get("/following/:userId",getFollowing)
 export default router;

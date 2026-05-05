@@ -2,6 +2,6 @@ import bcrypt from 'bcryptjs'
 export const hashPassword =(password) => {
   return bcrypt.hash(password, 10);
 };
-export const comparePassword =({password,existingPassword})=>{
+export const comparePassword =(password,existingPassword)=>{
     return bcrypt.compare(password, existingPassword);
 }

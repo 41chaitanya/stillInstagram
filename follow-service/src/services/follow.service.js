@@ -15,7 +15,7 @@ export const followUserService =async ({followerId,followingId}) => {
 export const unfollowUserService=async ({followerId,followingId}) => {
 
     await followModel.findOneAndDelete({followerId,followingId})
-    return {message:"unfollowed  sucessfully"}
+    return {message:"unfollowed  successfully"}
 }
 
 export const getFollowerService =async (userId) => {

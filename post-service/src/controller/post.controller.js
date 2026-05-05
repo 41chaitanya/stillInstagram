@@ -1,10 +1,10 @@
-import { asynHandler } from "../middlewares/asynHandler.middleware.js";
+import { asyncHandler } from "../middlewares/asyncHandler.middleware.js";
 import { createPostSrvice } from "../service/post.service.js";
 
-export const createPost = asynHandler(async (req, res) => {
+export const createPost = asyncHandler(async (req, res) => {
   const { caption } = req.body;
 
-  const userId = req.userId || Date.now().toString; //custom header ha abhi ke liye dummy ha baad me hum asli user pr aajye ge
+  const userId = req.userId || Date.now().toString(); //custom header ha abhi ke liye dummy ha baad me hum asli user pr aajye ge
   if (!req.file) {
     throw new Error("Image is required");
   }

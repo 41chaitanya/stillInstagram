@@ -1,6 +1,6 @@
 import { saveMessage } from "../service/message.service.js";
 
-export const iniSocket = (io) => {
+export const initSocket = (io) => {
   io.on("connection", (socket) => {
     console.log("User connected:", socket.id);
         // join room

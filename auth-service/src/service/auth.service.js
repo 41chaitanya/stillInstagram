@@ -2,7 +2,7 @@ import user_model from "../models/user_model.js";
 import { comparePassword, hashPassword } from "../utils/hashPassword.js";
 import { generatejwt } from "../utils/jwtUtil.js";
 
-export const registrService = async ({ username, email, password }) => {
+export const registerService = async ({ username, email, password }) => {
   const existingUser =await user_model.findOne({ email });
 
   if (existingUser) {
