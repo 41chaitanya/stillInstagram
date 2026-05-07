@@ -8,21 +8,20 @@ import { messageProxy } from "./proxies/message.proxy.js";
 
 dotenv.config();
 const app = express();
-app.use(express.json());
 
+// Test middleware
+app.use((req, res, next) => {
+    console.log('Request:', req.method, req.url);
+    next();
+});
 
-// public route
-
-app.use("/api/auth",authProxy)
-
-
-//protrected. route
-
-app.use("/api/post",verifyToken,postProxy)
-
-
+// ALL proxy routes FIRST - NO express.json() before any proxy
+app.use("/api/auth", authProxy)
+app.use("/api/post", verifyToken, postProxy)
 app.use("/api/follow", verifyToken, followProxy);
-
 app.use("/api/messages", verifyToken, messageProxy);
+
+// express.json() at the end (optional - only if you have non-proxy routes)
+// app.use(express.json());
 
 export default app;
